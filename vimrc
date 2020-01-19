@@ -44,8 +44,8 @@ set tm=500
 
 
 " show location
-set cursorcolumn
-set cursorline
+" set cursorcolumn
+" set cursorline
 
 
 " movement
@@ -143,6 +143,16 @@ hi! link ShowMarksHLu DiffChange
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 set laststatus=2   " Always show the status line - use 2 lines for the status bar
 
+" ============================ simplify vimdiff color ============================
+
+if &diff
+    " colorscheme evening
+    set t_Co=16
+    highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+    highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+    highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+    highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+endif
 
 " ============================ specific file type ===========================
 
