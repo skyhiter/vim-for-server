@@ -10,6 +10,9 @@
 " Desc: simple vim config for server, without any plugins.
 "==========================================
 
+" do not show welcome info when startup
+set shortmess=atI
+
 " leader
 let mapleader = ','
 let g:mapleader = ','
@@ -125,7 +128,10 @@ endif
 
 " NOT SUPPORT
 " Enable basic mouse behavior such as resizing buffers.
+" Disable mouse cursor select
 " set mouse=a
+" Enable mouse cursor select
+set mouse=r
 
 
 " ============================ theme and status line ============================
